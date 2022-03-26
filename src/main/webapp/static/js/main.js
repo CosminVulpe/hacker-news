@@ -1,1 +1,2 @@
-alert("I'm from main.js");
+// alert("I'm from main.js");
+console.log("test");
