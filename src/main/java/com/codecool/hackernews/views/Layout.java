@@ -26,17 +26,12 @@ public class Layout {
                 "</ul>\n" +
                 "</nav>\n" +
                 "<a class=\"cta\" href=\"#\"><button>Contact</button></a>\n" +
-                "</header>\n" +
-                "</body>\n" +
-                "</html>";
+                "</header>\n";
+
     }
 
     public String getMainBodyHtml() {
-        return "<body>\n" +
-                "<div class='visit'>You can serve any static content from <span class='folder'>webapp/static</span> folder, like a css file.</div>\n" +
-                "<div>Visit another servlet: <a href=\"/another\">Visit the other servlet</a></div> \n" +
-                "<div>You can provide a json file as well: <a href=\"/json\">Visit Hacker News json data example</a></div>\" \n" +
-                "</body>\n" +
+        return "</body>\n" +
                 "</html>";
     }
 

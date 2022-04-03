@@ -1,4 +1,4 @@
-package com.codecool.hackernews;
+package com.codecool.hackernews.controllers;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +15,11 @@ public class AnotherServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         for (int i = 0; i < 10; i++) {
             buffer.append("<div>");
-            buffer.append("<a href=\"/another?link_id=" + i + "\">");
-            buffer.append("Hello " + i + ". link:");
+            buffer.append("<a href=\"/another?link_id=").append(i).append("\">");
+            buffer.append("Hello ").append(i).append(". link:");
             buffer.append("</a>");
             buffer.append("</div>");
         }
