@@ -49,11 +49,7 @@ public class NewsDaoJdbc implements NewsDao {
         }
         in.close();
         connection.disconnect();
-        System.out.println( connection.getResponseCode());
         return sb.toString();
     }
 
-    public String getTypeOfNews() {
-        return typeOfNews;
-    }
 }

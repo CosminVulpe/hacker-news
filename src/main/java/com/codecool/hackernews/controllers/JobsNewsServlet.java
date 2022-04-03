@@ -16,15 +16,14 @@ import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet(name = "JobsNewsServlet", urlPatterns = {"/api/jobs?page=1"}, loadOnStartup = 1)
-public class JobsNewsServlet extends HackerNewServlet {
+public class JobsNewsServlet extends BaseServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         super.doGet(request, response);
         PrintWriter out = response.getWriter();
-        processPageParams(request);
         NewsDaoJdbc newsDaoJdbc = new NewsDaoJdbc("jobs");
-        List<News> newsList = newsDaoJdbc.getAll(page);
+        List<News> newsList = newsDaoJdbc.getAll(Integer.parseInt(request.getParameter("page")));
         Gson gson = new GsonBuilder().registerTypeAdapter(News.class, new NewsSerializer()).create();
         out.println(gson.toJson(newsList));
     }

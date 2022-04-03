@@ -1,12 +1,12 @@
 console.log("test");
 
 
-const init = async () => {
+const getInfo = async () => {
     console.log("async function")
-    const request = await fetch('/api/top?page=1');
-    const response = await request.json();
-    // console.log(response);
+    const request = await fetch('api/top?page=1');
+    const res = await request.json();
+    console.log(res);
 }
-init().then();
+getInfo().then(r => console.log(r));
 
 

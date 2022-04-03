@@ -15,14 +15,13 @@ import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet(name = "NewestNewsServlet", urlPatterns = {"/api/newest?page=1"}, loadOnStartup = 1)
-public class NewestNewsServlet extends HackerNewServlet {
+public class NewestNewsServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         super.doGet(request, response);
         PrintWriter out = response.getWriter();
-        processPageParams(request);
         NewsDaoJdbc newsDaoJdbc = new NewsDaoJdbc("newest");
-        List<News> newsList = newsDaoJdbc.getAll(page);
+        List<News> newsList = newsDaoJdbc.getAll(Integer.parseInt(request.getParameter("page")));
         Gson gson = new GsonBuilder().registerTypeAdapter(News.class, new NewsSerializer()).create();
         out.println(gson.toJson(newsList));
     }

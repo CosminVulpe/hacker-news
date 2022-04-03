@@ -32,7 +32,8 @@ public class Layout {
     }
 
     public String getMainBodyHtml() {
-        return "</body>\n" +
+        return "<div id='test'></div>"
+                + "</body>\n" +
                 "</html>";
     }
 

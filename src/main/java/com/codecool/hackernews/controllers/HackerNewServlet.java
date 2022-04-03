@@ -13,7 +13,6 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "hackerNewsServlet", urlPatterns = {"/"}, loadOnStartup = 1)
 public  class HackerNewServlet extends HttpServlet {
-    protected int page = -1;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -31,16 +30,5 @@ public  class HackerNewServlet extends HttpServlet {
         out.println(layout.getFooterHtml());
     }
 
-    protected void processPageParams(HttpServletRequest request) {
-        String pageParam = request.getParameter("page");
-        if (pageParam != null) {
-            try {
-                page = Integer.parseInt(pageParam);
-                if (page >= 1)
-                    page = 1;
-            } catch (NumberFormatException e) {
-                throw new NumberFormatException("Data Type Incorrect");
-            }
-        }
-    }
+
 }
