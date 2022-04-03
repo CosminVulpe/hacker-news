@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "hackerNewsServlet", urlPatterns = {"/"}, loadOnStartup = 1)
-public abstract class HackerNewServlet extends HttpServlet {
+public  class HackerNewServlet extends HttpServlet {
     protected int page = -1;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,10 +29,6 @@ public abstract class HackerNewServlet extends HttpServlet {
         out.println(layout.getNavBarHtml(title));
         out.println(layout.getMainBodyHtml());
         out.println(layout.getFooterHtml());
-
-        NewsDaoJdbc newsDaoJdbc = new NewsDaoJdbc("news");
-//        newsDaoJdbc.getExternalAPI(1);
-        newsDaoJdbc.getAll(2);
     }
 
     protected void processPageParams(HttpServletRequest request) {
@@ -42,7 +38,6 @@ public abstract class HackerNewServlet extends HttpServlet {
                 page = Integer.parseInt(pageParam);
                 if (page >= 1)
                     page = 1;
-
             } catch (NumberFormatException e) {
                 throw new NumberFormatException("Data Type Incorrect");
             }

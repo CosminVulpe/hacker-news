@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "JobsNewsServlet", urlPatterns = {"/api/jobs"}, loadOnStartup = 1)
+@WebServlet(name = "JobsNewsServlet", urlPatterns = {"/api/jobs?page=1"}, loadOnStartup = 1)
 public class JobsNewsServlet extends HackerNewServlet {
 
     @Override

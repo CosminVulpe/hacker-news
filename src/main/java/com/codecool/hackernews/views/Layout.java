@@ -25,7 +25,8 @@ public class Layout {
                 "<li><a href=\"#\">Curriculum</a></li>\n" +
                 "</ul>\n" +
                 "</nav>\n" +
-                "<a class=\"cta\" href=\"#\"><button>Contact</button></a>\n" +
+                "<a class=\"cta\" href=\"#\"><button>Sign up</button></a>\n" +
+                "<a class=\"cta\" href=\"#\"><button>Login</button></a>\n" +
                 "</header>\n";
 
     }

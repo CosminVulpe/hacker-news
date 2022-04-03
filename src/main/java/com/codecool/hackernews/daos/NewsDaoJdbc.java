@@ -18,18 +18,16 @@ import com.google.gson.reflect.TypeToken;
 
 
 public class NewsDaoJdbc implements NewsDao {
-    private final NewsSerializer newsSerializer;
     private final String typeOfNews;
 
     public NewsDaoJdbc(String typeOfNews) {
         this.typeOfNews = typeOfNews;
-        this.newsSerializer = new NewsSerializer();
     }
 
 
     @Override
     public List<News> getAll(int page) throws IOException {
-        Gson gsonBuilder = new GsonBuilder().registerTypeAdapter(News.class, newsSerializer).create();
+        Gson gsonBuilder = new GsonBuilder().registerTypeAdapter(News.class, new NewsSerializer()).create();
         String newsJSONFormat = getExternalAPI(page);
         Type newsList = new TypeToken<List<News>>() {
         }.getType();
@@ -51,7 +49,7 @@ public class NewsDaoJdbc implements NewsDao {
         }
         in.close();
         connection.disconnect();
-        System.out.println(sb.toString());
+        System.out.println( connection.getResponseCode());
         return sb.toString();
     }
 
