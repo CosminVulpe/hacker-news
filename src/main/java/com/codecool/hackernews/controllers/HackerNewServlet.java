@@ -29,6 +29,4 @@ public  class HackerNewServlet extends HttpServlet {
         out.println(layout.getMainBodyHtml());
         out.println(layout.getFooterHtml());
     }
-
-
 }

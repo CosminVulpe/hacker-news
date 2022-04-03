@@ -32,13 +32,17 @@ public class Layout {
     }
 
     public String getMainBodyHtml() {
-        return "<div id='test'></div>"
-                + "</body>\n" +
-                "</html>";
+        return "<div id='top-news'></div>\n"
+                ;
+
     }
 
     public String getFooterHtml() {
-        return "";
+        return "<footer>\n" +
+                "<p></p>\n" +
+                "</footer>\n" +
+                "</body>\n" +
+                "</html>";
     }
 
 

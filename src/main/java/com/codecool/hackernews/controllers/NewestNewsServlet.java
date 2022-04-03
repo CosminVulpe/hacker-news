@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "NewestNewsServlet", urlPatterns = {"/api/newest?page=1"}, loadOnStartup = 1)
+@WebServlet(name = "NewestNewsServlet", urlPatterns = {"/api/newest"}, loadOnStartup = 1)
 public class NewestNewsServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

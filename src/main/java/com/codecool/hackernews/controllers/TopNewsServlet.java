@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "topNewsServlet", urlPatterns = {"/api/top?page=1"}, loadOnStartup = 1)
+@WebServlet(name = "topNewsServlet", urlPatterns = {"/api/top"}, loadOnStartup = 1)
 public class TopNewsServlet extends BaseServlet {
 
     @Override
