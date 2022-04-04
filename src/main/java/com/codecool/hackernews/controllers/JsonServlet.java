@@ -1,4 +1,4 @@
-package com.codecool.hackernews;
+package com.codecool.hackernews.controllers;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
