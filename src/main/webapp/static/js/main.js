@@ -13,7 +13,6 @@ const jobs = document.querySelector('#jobs-header');
 const getInfo = async (fetchUrl, divQuery, page) => {
     const divMain = document.querySelector(divQuery);
     let result = "";
-    console.log(fetchUrl + page);
     const request = await fetch(fetchUrl + page);
     const res = await request.json();
     for (let i = 0; i < res.length; i++) {

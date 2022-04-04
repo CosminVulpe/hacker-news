@@ -8,7 +8,7 @@ public class Layout {
                 "<meta charset=\"UTF-8\">\n" +
                 "<title>" + titlePage + "</title>\n" +
                 "<link rel=\"stylesheet\" type=\"text/css\" href='/static/css/site.css' />\n" +
-                "<link rel=\"stylesheet\" href=\"path/to/bootstrap/css/bootstrap.min.css\">\n" +
+                "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>\n" +
                 "<script src=\"/static/js/main.js\" defer>" + "</script>\n" +
                 "</head>";
     }
@@ -38,23 +38,20 @@ public class Layout {
     }
 
     public String getFooterHtml() {
-            return "<footer>\n" +
-                        "<section id='footer'>"+
-                            "<div class='footer-content'>\n" +
-                                "<ul class='socials'>" +
-                                    "<li><a href='#'><i class='fa fa-facebook-official' aria-hidden='true'></i></a></li>\n" +
-                                    "<li><a href='#'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>\n" +
-                                    "<li><a href='#'><i class='fa fa-github' aria-hidden='true'></i></a></li>\n" +
-                                    "<li><a href='#'><i class='fa fa-linkedin-square' aria-hidden='true'></i></a></li>\n" +
-                                "</ul>" +
-                            "</div>" +
-                            "<div class='footer-bottom'>\n"+
-                                "<p>copyright &copy;2022  designed by Cosmin Vulpe</p>\n" +
-                                "<p>email: cosmin98vulpe@gmail.com</p>\n" +
-                                "<li><a href='#'><span class=\"fa-brands fa-github\"></span></i></a></li>\n" +
-                            "</div>\n"+
-                    "</section>"+
-                    "</footer>\n" +
+        return "<footer>\n" +
+                "<section id='footer'>" +
+                "<div class='footer-bottom'>\n" +
+                "<p>copyright &copy;2022  designed by Cosmin Vulpe</p>\n" +
+                "<p>email: cosmin98vulpe@gmail.com</p>\n" +
+                "<div class='footer-content'>\n" +
+                "<ul class='socials'>" +
+                "<li><a href='https://github.com/CosminVulpe' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>\n" +
+                "<li><a href='https://uk.linkedin.com/in/cosmin-vulpe-885114181/ro?trk=people-guest_people_search-card' target='_blank'><i class='fa fa-linkedin-square' aria-hidden='true'></i></a></li>\n" +
+                "</ul>" +
+                "</div>" +
+                "</div>\n" +
+                "</section>" +
+                "</footer>\n" +
                 "</body>\n" +
                 "</html>";
     }
