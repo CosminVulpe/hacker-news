@@ -13,7 +13,7 @@ body {
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 17px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -86,6 +86,7 @@ button:hover {
     border-radius: .40rem;
     float: none;
     margin: 0 auto 10px;
+    font-family: "Montserrat", sans-serif;
 }
 
 footer {
@@ -129,7 +130,6 @@ footer {
 
 .socials li {
     margin: 0 10px;
-
 }
 
 .socials a {
@@ -147,7 +147,7 @@ footer {
 }
 
 .footer-bottom {
-    background-color:  #DEB887;
+    background-color: #DEB887;
     width: 100vw;
     padding: 20px 0;
     text-align: center;
@@ -157,4 +157,17 @@ footer {
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
+}
+
+#pagination{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#pagination .button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+
 }
