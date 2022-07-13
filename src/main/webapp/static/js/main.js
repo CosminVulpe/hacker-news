@@ -2,8 +2,8 @@ let pageNews = 1;
 let pageNewest = 1;
 let pageJobs = 1;
 
-let pageNewsMax = 10;
-let pageNewestMax = 10;
+const pageNewsMax = 10;
+const pageNewestMax = 10;
 
 const topNews = document.querySelector('#top-news-header');
 const newest = document.querySelector('#newest-header');
@@ -33,10 +33,9 @@ const deletePreviousDiv = (divDelete) => {
 
 const pagination = (pageMax) => {
     const div = document.querySelector('#pagination');
-    console.log(pageMax);
     let result = "";
     if (pageMax !== 1) {
-        for (let i = 1; i < pageMax; i++) {
+        for (let i = 1; i < pageMax + 1; i++) {
             result += `<a href='#' class='number' data-page='${i}'>${" " + i + " "}</a>`
         }
     } else {
@@ -56,7 +55,6 @@ const choosePage = (fetchUrl, divQuery, pageStart) => {
             pageSelected = true;
             pageStart = num.innerHTML;
             getInfo(fetchUrl, divQuery, pageStart.trim()).then();
-            console.log(pageStart);
         })
     });
     if (pageSelected === false) {
@@ -69,13 +67,11 @@ const choosePage = (fetchUrl, divQuery, pageStart) => {
 const init = async () => {
     // START INDEX
     pagination(pageNewsMax);
-    // await getInfo("/api/top?page=", '#news', choosePage(pageNews));
     choosePage("/api/top?page=", '#news', pageNews);
 
     topNews.addEventListener('click', () => {
         deletePreviousDiv('#newest');
         deletePreviousDiv('#jobs');
-        // getInfo("/api/top?page=", '#news',  choosePage(pageNews))
         pagination(pageNewsMax);
         choosePage("/api/top?page=", '#news', pageNews)
     });
@@ -84,7 +80,6 @@ const init = async () => {
     newest.addEventListener('click', () => {
         deletePreviousDiv('#news');
         deletePreviousDiv('#jobs');
-        // getInfo("/api/newest?page=", '#newest', choosePage(pageNewest))
         pagination(pageNewestMax);
         choosePage("/api/newest?page=", '#newest', pageNewest);
     });

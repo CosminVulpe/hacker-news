@@ -11,11 +11,12 @@ public class NewsSerializer implements JsonSerializer<News>, JsonDeserializer<Ne
     @Override
     public News deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
         JsonObject jsonObject = jsonElement.getAsJsonObject();
+        String user =  (jsonObject.get("user").isJsonNull())
+                ? "" : jsonObject.get("user").getAsString();
         return new News(
                 jsonObject.get("title").getAsString(),
                 jsonObject.get("time_ago").getAsString(),
-                jsonObject.get("user").isJsonNull()
-                        ? "" : jsonObject.get("user").getAsString(),
+                user,
                 jsonObject.get("url").getAsString()
         );
     }
