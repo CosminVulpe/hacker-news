@@ -22,3 +22,7 @@ To start the project, the command-line is used: `mvn jetty:run`.
 - Access external API 
 - Working with Java Serialization
 - Pagination
+
+## Screenshots
+![Screenshot from 2022-07-13 09-24-47](https://user-images.githubusercontent.com/86559678/178665314-a8a78a17-2929-47e9-8f93-918786c5091b.png)
+![Screenshot from 2022-07-13 09-24-51](https://user-images.githubusercontent.com/86559678/178665487-5318a1ef-8803-4500-abc6-5c2848f4cabe.png)
