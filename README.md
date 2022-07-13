@@ -14,7 +14,7 @@ The aplication uses the external API from the original *Hacker News* website. Th
 Make sure you have [Maven (Windows)](https://www.educba.com/install-maven/) or [Maven (Linux)](https://www.journaldev.com/33588/install-maven-linux-ubuntu) install.
 
 ### Start the project
-To start the project, the command-line is used: `mvn jetty:run`.
+To start the project, the command-line is used: `mvn jetty:run`. The local port running for the website is: `localhost:8080`.
 
 ## Functionality overview
 
