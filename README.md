@@ -6,6 +6,11 @@
 > ### Hacker News is a website that accesses an external API of the original website *Hacker News* showing tech news.
 Hacker News was created to put into practice the knowledge accumulated so far about Java, Html, JS, CSS as well as improve my skills regarding Java Serialization.
 
+## General functionality
+- Access external API 
+- Working with Java Serialization
+- Pagination
+
 ## How it works
 The aplication uses the external API from the original *Hacker News* website. The news are displayed in cards made with CSS together as well as with pagination.
 
@@ -15,13 +20,6 @@ Make sure you have [Maven (Windows)](https://www.educba.com/install-maven/) or [
 
 ### Start the project
 To start the project, the command-line is used: `mvn jetty:run`. The local port running for the website is: `localhost:8080`.
-
-## Functionality overview
-
-### General functionality
-- Access external API 
-- Working with Java Serialization
-- Pagination
 
 ## Screenshots
 ![Screenshot from 2022-07-13 09-24-47](https://user-images.githubusercontent.com/86559678/178665314-a8a78a17-2929-47e9-8f93-918786c5091b.png)
